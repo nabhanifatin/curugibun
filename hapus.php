@@ -17,12 +17,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Ambil ID dari URL
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$id = isset($_GET['id_pemesanan']) ? intval($_GET['id_pemesanan']) : 0;
 
 // Periksa apakah ID valid
 if ($id > 0) {
     // Query untuk menghapus data
-    $query = "DELETE FROM pemesanan WHERE id = ?";
+    $query = "DELETE FROM pemesanan WHERE id_pemesanan = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("i", $id);
 

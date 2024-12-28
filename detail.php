@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -35,25 +35,9 @@
 </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Discover Majalengka</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../pemesanan.php">Pemesanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="daftar.php">Daftar Pemesanan</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <?php
-include '../connection/koneksi.php';
+include 'koneksi.php';
 
 $id_pemesanan = htmlentities($_GET['id_pemesanan']);
 
@@ -126,7 +110,7 @@ if(mysqli_num_rows($query)==0)
 	</div>
 	<div class="mb-3">
 	  <label for="created_at" class="form-label">Waktu Pemesanan</label>
-	  <div id="created_at"><?=$detail[10]?></div>
+	  <div id="created_at"><?=$detail[11]?></div>
 	</div>
   </div>
   <div class="card-footer d-print-none">

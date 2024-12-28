@@ -23,7 +23,7 @@ if(isset($_POST['nama_pemesanan'])){
 	$query = mysqli_query($db,$sql);
 	if($query){ 
         
-        echo 1; 
+        header('Location: daftar.php');
 	    // $id_pemesanan = mysqli_insert_id($db);
 	    // header('Location: ../index.php?aksi=detail&id_pemesanan='.$id_pemesanan);
 	    //echo $id_pemesanan;
